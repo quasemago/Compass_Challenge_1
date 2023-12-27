@@ -21,7 +21,7 @@ public class Program1 {
 
         System.out.print("Informe seu nome para iniciar o Quiz: ");
         String userName;
-        while ((userName = sc.nextLine()).trim().isEmpty()) {
+        while ((userName = sc.nextLine()).isBlank()) {
             System.out.print("Por favor, informe seu nome para iniciar o Quiz: ");
         }
 
