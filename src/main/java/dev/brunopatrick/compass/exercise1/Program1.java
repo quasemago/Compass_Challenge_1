@@ -20,7 +20,10 @@ public class Program1 {
         final Scanner sc = new Scanner(System.in);
 
         System.out.print("Informe seu nome para iniciar o Quiz: ");
-        final String userName = sc.nextLine();
+        String userName;
+        while ((userName = sc.nextLine()).trim().isEmpty()) {
+            System.out.print("Por favor, informe seu nome para iniciar o Quiz: ");
+        }
 
         // Start questions.
         final QuizService quizService = new QuizService(quiz);
