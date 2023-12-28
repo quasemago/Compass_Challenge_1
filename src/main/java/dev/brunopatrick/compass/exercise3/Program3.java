@@ -31,27 +31,31 @@ public class Program3 {
             }
 
             // Calculate bonus or discount.
-            final EmployeeService employeeService = new EmployeeService();
-
             System.out.println("RELATÓRIO:");
-            for (Employee employee : employeeList) {
-                System.out.printf("Funcionário: %s%n", employee.getName());
-                System.out.printf("Salário: R$ %.2f%n", employee.getSalary());
-
-                // Check if bonus or discount.
-                final double bonusOrDiscount = employeeService.calculateBonusOrDiscount(employee);
-                if (employeeService.shouldReceiveBonus(employee)) {
-                    System.out.printf("Bônus: R$ %.2f%n", bonusOrDiscount);
-                } else {
-                    System.out.printf("Desconto: R$ %.2f%n", bonusOrDiscount);
-                }
-
-                final double netSalary = employeeService.calculateNetSalary(employee);
-                System.out.printf("Salário Líquido: R$ %.2f%n", netSalary);
-                System.out.println();
-            }
+            printReport(employeeList);
         } catch (InputMismatchException e) {
             System.out.println("Erro: Informe os dados no formato correto.");
+        }
+    }
+
+    private static void printReport(List<Employee> employeeList) {
+        final EmployeeService employeeService = new EmployeeService();
+
+        for (Employee employee : employeeList) {
+            System.out.printf("Funcionário: %s%n", employee.getName());
+            System.out.printf("Salário: R$ %.2f%n", employee.getSalary());
+
+            // Check if bonus or discount.
+            final double bonusOrDiscount = employeeService.calculateBonusOrDiscount(employee);
+            if (employeeService.shouldReceiveBonus(employee)) {
+                System.out.printf("Bônus: R$ %.2f%n", bonusOrDiscount);
+            } else {
+                System.out.printf("Desconto: R$ %.2f%n", bonusOrDiscount);
+            }
+
+            final double netSalary = employeeService.calculateNetSalary(employee);
+            System.out.printf("Salário Líquido: R$ %.2f%n", netSalary);
+            System.out.println();
         }
     }
 }
