@@ -21,7 +21,10 @@ public class Program3 {
                 System.out.println("Funcionário #" + (i));
 
                 System.out.print("Informe o nome do funcionário: ");
-                final String name = sc.nextLine();
+                String name;
+                while ((name = sc.nextLine()).isBlank()) {
+                    System.out.print("Por favor, informe o nome do funcionário: ");
+                }
 
                 System.out.print("Informe o salário do funcionário: ");
                 final double salary = sc.nextDouble();
