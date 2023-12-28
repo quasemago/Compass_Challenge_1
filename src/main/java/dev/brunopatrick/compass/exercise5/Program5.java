@@ -1,5 +1,6 @@
 package dev.brunopatrick.compass.exercise5;
 
+import java.text.Normalizer;
 import java.util.Scanner;
 
 // Palindrome Program.
@@ -13,12 +14,17 @@ public class Program5 {
             System.out.print("Por favor, entre com uma mensagem: ");
         }
 
+        // Remove accents and spaces.
+        final String msgFinal = Normalizer.normalize(msg, Normalizer.Form.NFKD)
+                .replaceAll("\\p{InCombiningDiacriticalMarks}+", "")
+                .trim();
+
         // Check if the message is a palindrome.
-        final String reversedMsg = new StringBuilder(msg)
+        final String reversedMsg = new StringBuilder(msgFinal)
                 .reverse()
                 .toString();
 
-        if (msg.equalsIgnoreCase(reversedMsg)) {
+        if (msgFinal.equalsIgnoreCase(reversedMsg)) {
             System.out.println("É um palíndromo.");
         } else {
             System.out.println("Não é um palíndromo.");
