@@ -15,16 +15,17 @@ public class Program5 {
         }
 
         // Remove accents and spaces.
-        final String msgFinal = Normalizer.normalize(msg, Normalizer.Form.NFKD)
+        final String finalMsg = Normalizer.normalize(msg, Normalizer.Form.NFKD)
                 .replaceAll("\\p{InCombiningDiacriticalMarks}+", "")
+                .replaceAll("\\s", "")
                 .trim();
 
         // Check if the message is a palindrome.
-        final String reversedMsg = new StringBuilder(msgFinal)
+        final String reversedMsg = new StringBuilder(finalMsg)
                 .reverse()
                 .toString();
 
-        if (msgFinal.equalsIgnoreCase(reversedMsg)) {
+        if (finalMsg.equalsIgnoreCase(reversedMsg)) {
             System.out.println("É um palíndromo.");
         } else {
             System.out.println("Não é um palíndromo.");
