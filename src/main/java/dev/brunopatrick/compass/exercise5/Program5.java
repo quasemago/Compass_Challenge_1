@@ -14,9 +14,10 @@ public class Program5 {
             System.out.print("Por favor, entre com uma mensagem: ");
         }
 
-        // Remove accents and spaces.
+        // Normalize message.
         final String finalMsg = Normalizer.normalize(msg, Normalizer.Form.NFKD)
                 .replaceAll("\\p{InCombiningDiacriticalMarks}+", "")
+                .replaceAll("\\p{Punct}", "")
                 .replaceAll("\\s", "")
                 .trim();
 
