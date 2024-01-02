@@ -11,7 +11,7 @@ public class Program6 {
     public static void main(String[] args) {
         try {
             final Produto p1 = new Produto("TV",  UUID.randomUUID(), 500.00, 100);
-            final Produto p2 = new Produto("Notebook", UUID.randomUUID(), 1000.00, 49);
+            final Produto p2 = new Produto("Notebook", UUID.randomUUID(), 1000.00, 50);
 
             final List<Produto> produtoList = new ArrayList<>();
             produtoList.add(p1);
@@ -31,8 +31,8 @@ public class Program6 {
             }
 
             System.out.println("--------------------------");
-            p1.comprar(2);
-            p2.vender(28);
+            p1.vender(17);
+            p2.comprar(15);
             System.out.println();
 
             for (Produto p : produtoList) {
