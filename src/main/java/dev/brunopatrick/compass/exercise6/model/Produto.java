@@ -50,6 +50,7 @@ public class Produto {
     }
 
     public void comprar(Integer quantidade) {
+        System.out.println("Foram comprados " + quantidade + " únidades do produto " + getNome() + " por R$" + String.format("%.2f", getPreco() * quantidade) + "!");
         this.quantidadeEstoque += quantidade;
     }
 
@@ -57,6 +58,7 @@ public class Produto {
         if (quantidade > this.quantidadeEstoque) {
             throw new ProdutoException("Não há estoque suficiente para a venda.");
         }
+        System.out.println("Foram vendidos " + quantidade + " únidades do produto " + getNome() + " por R$" + String.format("%.2f", getPreco() * quantidade) + "!");
         this.quantidadeEstoque -= quantidade;
     }
 
