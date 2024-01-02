@@ -1,5 +1,7 @@
 package dev.brunopatrick.compass.exercise6.model;
 
+import dev.brunopatrick.compass.exercise6.exception.ProdutoException;
+
 import java.util.UUID;
 
 public class Produto {
@@ -52,6 +54,9 @@ public class Produto {
     }
 
     public void vender(Integer quantidade) {
+        if (quantidade > this.quantidadeEstoque) {
+            throw new ProdutoException("Não há estoque suficiente para a venda.");
+        }
         this.quantidadeEstoque -= quantidade;
     }
 
