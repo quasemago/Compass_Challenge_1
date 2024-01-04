@@ -8,6 +8,7 @@ Segue a lista de exercícios:
 - [Exercício 2 - Login](#Exercício-2---Login)
 - [Exercício 3 - Bonus](#Exercício-3---Bonus)
 - [Exercício 4 - Emoticons](#Exercício-4---Emoticons)
+- [Exercício 5 - Palíndromo](#Exercício-5---Palíndromo)
 
 ## Exercício 1 - Quiz
 O primeiro exercício consiste em um quiz de perguntas e respostas, onde o usuário após informar seu nome, irá responder algumas perguntas, sendo informado se acertou ou não, e no final será informado o total de acertos e erros.
@@ -125,4 +126,23 @@ Saida: chateado
 --
 Entrada: Hoje foi um dia comum.
 Saida: neutro
+```
+
+## Exercício 5 - Palíndromo
+O quinto exercício consiste em um sistema que após o usuário informar uma frase, o mesmo irá determinar se a mesma é um palíndromo ou não. Um palíndromo é uma palavra ou frase que tenha a propriedade de poder ser lida tanto da direita para a esquerda como da esquerda para a direita.
+
+Para resolução desse exercício, o primeiro passo consiste em normalizar a frase ou palavra informada pelo usuário, ou seja, devemos remover os espaços em brancos, acentos e pontuações, para não interferirem na validação do palíndromo.
+
+Após normalizar a mensagem, uma forma muito simples de validar se a mesma é um palíndromo é comparar a mensagem com a mesma invertida, e caso sejam iguais, então é um palíndromo. Portanto, após invertemos a mensagem, basta comparar com a mensagem original ignorando a diferenciação entre maiúsculas e minúsculas.
+
+Exemplo de resposta de saída:
+```
+Entre com uma mensagem: Radar
+É um palíndromo.
+--
+Entre com uma mensagem: Java
+Não é um palíndromo.
+--
+Entre com uma mensagem: Omissíssimo
+É um palíndromo.
 ```
