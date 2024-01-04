@@ -1,9 +1,11 @@
 package dev.brunopatrick.compass.exercise3;
 
 import dev.brunopatrick.compass.exercise3.model.Employee;
-import dev.brunopatrick.compass.exercise3.service.EmployeeService;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.InputMismatchException;
+import java.util.List;
+import java.util.Scanner;
 
 // Bonus Program.
 public class Program3 {
@@ -42,21 +44,19 @@ public class Program3 {
     }
 
     private static void printReport(List<Employee> employeeList) {
-        final EmployeeService employeeService = new EmployeeService();
-
         for (Employee employee : employeeList) {
             System.out.printf("Funcionário: %s%n", employee.getName());
             System.out.printf("Salário: R$ %.2f%n", employee.getSalary());
 
             // Check if bonus or discount.
-            final double bonusOrDiscount = employeeService.calculateBonusOrDiscount(employee);
-            if (employeeService.shouldReceiveBonus(employee)) {
+            final double bonusOrDiscount = employee.calculateBonusOrDiscount();
+            if (employee.shouldReceiveBonus()) {
                 System.out.printf("Bônus: R$ %.2f%n", bonusOrDiscount);
             } else {
                 System.out.printf("Desconto: R$ %.2f%n", bonusOrDiscount);
             }
 
-            final double netSalary = employeeService.calculateNetSalary(employee);
+            final double netSalary = employee.calculateNetSalary(employee.getSalary(), bonusOrDiscount);
             System.out.printf("Salário Líquido: R$ %.2f%n", netSalary);
             System.out.println();
         }
