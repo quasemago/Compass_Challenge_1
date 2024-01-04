@@ -4,9 +4,10 @@ Esse projeto foi desenvolvido por Bruno Patrick Formehl Ronning para o 1º desaf
 Esse primeiro desafio consiste em uma série de pequenos exercícios que irão ser separados por *packages* para uma melhor organização.
 
 Segue a lista de exercícios:
-- [Exercício 1](#Exercício-1---Quiz)
-- [Exercício 2](#Exercício-2---Login)
-- [Exercício 3](#Exercício-3---Bonus)
+- [Exercício 1 - Quiz](#Exercício-1---Quiz)
+- [Exercício 2 - Login](#Exercício-2---Login)
+- [Exercício 3 - Bonus](#Exercício-3---Bonus)
+- [Exercício 4 - Emoticons](#Exercício-4---Emoticons)
 
 ## Exercício 1 - Quiz
 O primeiro exercício consiste em um quiz de perguntas e respostas, onde o usuário após informar seu nome, irá responder algumas perguntas, sendo informado se acertou ou não, e no final será informado o total de acertos e erros.
@@ -97,4 +98,31 @@ Funcionário: ABC
 Salário: R$ 700,00
 Bônus: R$ 140,00
 Salário Líquido: R$ 840,00
+```
+
+## Exercício 4 - Emoticons
+O quarto exercício consiste em um sistema que após o usuário informar uma frase, o mesmo irá determinar o sentimento expresso nela conforme a quantidade de _emoticons_ encontradas na mesma.
+
+Os _emoticons_ que serão considerados são:
+- :-) para Divertido.
+- :-( para Chateado.
+
+As respostas possíveis são:
+- Divertido, caso a frase contenha mais _emoticons_ de "divertido".
+- Chateado, caso a frase contenha mais _emoticons_ de "chateado".
+- Neutro, caso a frase contenha a mesma quantidade de _emoticons_ "divertido" e "chateado".
+
+Para resolução desse exercício, o primeiro passo consiste em percorrer cada caractere da frase até encontrar o caractere `:`, que identifica o início do _emoticon_.
+Após encontrar o caractere `:`, o próximo passo é verificar se a frase possui mais 2 caracteres, garantido que não seja o final da mesma. Se houver, então é verificado se os próximos caracteres são `-)` ou `-(`, e caso seja, será incrementado o contador do _emoticon_ correspondente.
+
+Exemplo de resposta de saída:
+```
+Entrada: Estou feliz :-)
+Saida: divertido
+--
+Entrada: Sonhei com a prova, estou triste. :-(
+Saida: chateado
+--
+Entrada: Hoje foi um dia comum.
+Saida: neutro
 ```
