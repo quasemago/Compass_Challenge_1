@@ -21,11 +21,7 @@ public class Program4 {
         int madCount = 0;
 
         for (int i = 0; i < msg.length(); i++) {
-            // Check if the current character is a colon.
-            // This indicates that it could be a possible emoticon.
             if (msg.charAt(i) == ':') {
-                // Validates the length of the string,
-                // to make sure there are more characters after the colon.
                 if (i + 2 < msg.length()) {
                     final String emoticon = msg.substring(i, i + 3);
                     if (emoticon.equals(HAPPY_EMOTICON)) {

@@ -8,8 +8,6 @@ import java.util.Scanner;
 // Login Program.
 public class Program2 {
     public static void main(String[] args) {
-        // Register hardcoded user, to simulate a database.
-        // In a real application, this would be done by a database.
         final UserService userService = new UserService();
         userService.createUser("compass", "123456");
 
@@ -42,8 +40,6 @@ public class Program2 {
             } else if (hour >= 12 && hour < 18) {
                 System.out.println("Boa tarde, você se logou ao nosso sistema.");
             }
-            // It is none of the other options,
-            // so it's between 18h and 23h59.
             else {
                 System.out.println("Boa noite, você se logou ao nosso sistema.");
             }

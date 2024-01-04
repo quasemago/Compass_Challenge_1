@@ -11,9 +11,6 @@ public class EmployeeService {
         if (salary <= 1000.00) {
             return salary * 0.2;
         } else {
-            // For any other value above 1000.00,
-            // the percentage used in the calculation is 10%,
-            // so we don't need to worry about whether it is a bonus or discount.
             return salary * 0.1;
         }
     }
