@@ -5,7 +5,6 @@ import dev.brunopatrick.compass.exercise2.model.User;
 import java.util.ArrayList;
 
 public class UserService {
-    // Simulated database.
     private final ArrayList<User> users = new ArrayList<>();
 
     public void createUser(String username, String password) {
@@ -22,8 +21,6 @@ public class UserService {
                         && u.getPassword().equals(password))
                 .findFirst()
                 .orElse(null);
-
-        // Check if the user was found with the given username and password.
         return (user != null);
     }
 }
