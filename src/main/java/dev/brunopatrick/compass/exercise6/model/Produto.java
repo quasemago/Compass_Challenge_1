@@ -50,6 +50,9 @@ public class Produto {
     }
 
     public void comprar(Integer quantidade) {
+        if (quantidade <= 0) {
+            throw new ProdutoException("É necessário comprar pelo menos uma unidade do produto.");
+        }
         System.out.println("Foram comprados " + quantidade + " únidades do produto " + getNome() + " por R$" + String.format("%.2f", getPreco() * quantidade) + "!");
         this.quantidadeEstoque += quantidade;
     }
