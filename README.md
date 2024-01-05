@@ -9,6 +9,7 @@ Segue a lista de exercícios:
 - [Exercício 3 - Bonus](#Exercício-3---Bonus)
 - [Exercício 4 - Emoticons](#Exercício-4---Emoticons)
 - [Exercício 5 - Palíndromo](#Exercício-5---Palíndromo)
+- [Exercício 6 - Gerenciamento de Estoque de Produtos](#Exercício-6---Gerenciamento-de-Estoque-de-Produtos)
 
 ## Exercício 1 - Quiz
 O primeiro exercício consiste em um quiz de perguntas e respostas, onde o usuário após informar seu nome, irá responder algumas perguntas, sendo informado se acertou ou não, e no final será informado o total de acertos e erros.
@@ -129,7 +130,7 @@ Saida: neutro
 ```
 
 ## Exercício 5 - Palíndromo
-O quinto exercício consiste em um sistema que após o usuário informar uma frase, o mesmo irá determinar se a mesma é um palíndromo ou não. Um palíndromo é uma palavra ou frase que tenha a propriedade de poder ser lida tanto da direita para a esquerda como da esquerda para a direita.
+O quinto exercício consiste em um sistema que após o usuário informar uma mensagem, irá ser determinado se a mesma é um palíndromo ou não. Um palíndromo é uma palavra ou frase que tenha a propriedade de poder ser lida tanto da direita para a esquerda como da esquerda para a direita.
 
 Para resolução desse exercício, o primeiro passo consiste em normalizar a frase ou palavra informada pelo usuário, ou seja, devemos remover os espaços em brancos, acentos e pontuações, para não interferirem na validação do palíndromo.
 
@@ -145,4 +146,55 @@ Não é um palíndromo.
 --
 Entre com uma mensagem: Omissíssimo
 É um palíndromo.
+```
+
+## Exercício 6 - Gerenciamento de Estoque de Produtos
+O sexto exercício consiste em um sistema de gerenciamento de estoque de produtos para uma loja.
+
+Para resolução desse exercício, foi criado uma classe entidade chamada de `Produto`, que será responsável por armazenar os dados de cada produto, contendo os atributos `nome`, `código`, `preco` e ``quantidadeEstoque``.
+Além disso, a classe `Produto` também contém os métodos `comprar` e `vender`, que serão responsáveis por comprar e vender os produtos da loja, respectivamente.
+
+Os métodos ``comprar`` e ``vender`` da classe ``Produto``, tem como funcionamento a seguinte lógica:
+- ``comprar``: recebe como parâmetro a quantidade de produtos que serão comprados, e irá incrementar a quantidade de produtos no estoque.
+- ``vender``: recebe como parâmetro a quantidade de produtos que serão vendidos, e irá decrementar a quantidade de produtos no estoque. Também irá ser verificado se a quantidade de produtos no estoque é suficiente para a venda, caso não seja, será informado que não há produtos suficientes para a venda.
+
+Exemplo de resposta de saída:
+```
+Nome: TV
+Código: b8f8fc6f-dd0f-4db1-9eb7-bc8314c08ba1
+Preço: 500,00
+Quantidade em Estoque: 100
+
+Nome: Notebook
+Código: ef44b4c1-7445-4e4b-8a77-69f57ecf565d
+Preço: 1000,00
+Quantidade em Estoque: 50
+
+--------------------------
+Foram comprados 25 únidades do produto TV por R$12500,00!
+Foram vendidos 20 únidades do produto Notebook por R$20000,00!
+
+Nome: TV
+Código: b8f8fc6f-dd0f-4db1-9eb7-bc8314c08ba1
+Preço: 500,00
+Quantidade em Estoque: 125
+
+Nome: Notebook
+Código: ef44b4c1-7445-4e4b-8a77-69f57ecf565d
+Preço: 1000,00
+Quantidade em Estoque: 30
+
+--------------------------
+Foram vendidos 17 únidades do produto TV por R$8500,00!
+Foram comprados 15 únidades do produto Notebook por R$15000,00!
+
+Nome: TV
+Código: b8f8fc6f-dd0f-4db1-9eb7-bc8314c08ba1
+Preço: 500,00
+Quantidade em Estoque: 108
+
+Nome: Notebook
+Código: ef44b4c1-7445-4e4b-8a77-69f57ecf565d
+Preço: 1000,00
+Quantidade em Estoque: 45
 ```
