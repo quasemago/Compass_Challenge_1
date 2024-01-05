@@ -155,7 +155,7 @@ Para resolução desse exercício, foi criado uma classe entidade chamada de `Pr
 Além disso, a classe `Produto` também contém os métodos `comprar` e `vender`, que serão responsáveis por comprar e vender os produtos da loja, respectivamente.
 
 Os métodos ``comprar`` e ``vender`` da classe ``Produto``, tem como funcionamento a seguinte lógica:
-- ``comprar``: recebe como parâmetro a quantidade de produtos que serão comprados, e irá incrementar a quantidade de produtos no estoque.
+- ``comprar``: recebe como parâmetro a quantidade de produtos que serão comprados, e irá incrementar a quantidade de produtos no estoque. Também irá ser verificado se a quantidade de produtos informada é maior que zero, caso não seja, será informado que a quantidade de produtos informada é inválida.
 - ``vender``: recebe como parâmetro a quantidade de produtos que serão vendidos, e irá decrementar a quantidade de produtos no estoque. Também irá ser verificado se a quantidade de produtos no estoque é suficiente para a venda, caso não seja, será informado que não há produtos suficientes para a venda.
 
 Exemplo de resposta de saída:
