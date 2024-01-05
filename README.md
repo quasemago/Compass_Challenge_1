@@ -3,6 +3,8 @@ Esse projeto foi desenvolvido por Bruno Patrick Formehl Ronning para o 1º desaf
 
 Esse primeiro desafio consiste em uma série de pequenos exercícios que irão ser separados por *packages* para uma melhor organização.
 
+**Importante:** Para visualizar os detalhes de como executar o projeto, acesse a seção [Como executar o projeto](#Como-executar-o-projeto).
+
 Segue a lista de exercícios:
 - [Exercício 1 - Quiz](#Exercício-1---Quiz)
 - [Exercício 2 - Login](#Exercício-2---Login)
@@ -198,3 +200,29 @@ Código: ef44b4c1-7445-4e4b-8a77-69f57ecf565d
 Preço: 1000,00
 Quantidade em Estoque: 45
 ```
+---
+# Como executar o projeto
+O projeto foi desenvolvido utilizando a linguagem de programação Java, utilizando o Java Development Kit (JDK) na versão 17.
+Portanto, para executar o projeto, é necessário ter o JDK 17 instalado na máquina, que pode ser baixado através do link: https://www.oracle.com/java/technologies/downloads/#java17
+
+## Utilizando uma IDE (IntelliJ IDEA)
+Após instalar o JDK 17, basta abrir o projeto em uma IDE de sua preferência com suporte ao _mavem_, como por exemplo o IntelliJ IDEA, para que todas as dependências sejam baixadas.
+
+Com o projeto aberto na IDE, basta executar a classe que corresponde ao método ``main`` de cada exercício (nomeados como Program**X**, sendo **X** a numeração do exercício), que estão organizados por pacote para melhor organização.
+Sendo a localização dos exercícios no pacote raiz ``dev.brunopatrick.compass``.
+
+Por exemplo, para navegar até o exercício 1, devemos entrar no pacote ``dev.brunopatrick.compass.exercise1``, e executar a classe ``Program1``.
+
+## Utilizando o terminal
+Para executar o projeto diretamente via terminal, além do JDK 17, é necessário ter o _mavem_ instalado na máquina, que pode ser baixado através do link: https://maven.apache.org/download.cgi
+
+Após tudo instalado, basta abrir o terminal na pasta raiz do projeto, e executar o comando ``mvn clean install`` para que todas as dependências sejam baixadas. Após isso execute o comando ``mvn clean package`` para compilar nosso projeto.
+
+Após a execução dos comandos acima, observe que será criado uma pasta chamada ``target`` na raiz do projeto, essa pasta contem o nosso projeto compilado, sendo nomeado de ``compass-1.0-SNAPSHOT.jar``. Após entrar na pasta, basta executar o arquivo compilado do projeto utilizando o java.
+
+**Importante:** Devido à organização dos exercícios por pacotes, é necessário definir o caminho da classe contendo o método ``main`` nos argumentos de execução do comando.
+Por exemplo, para executar o primeiro exercício, devemos executar o comando dessa forma: ``java -cp .\compass-1.0-SNAPSHOT.jar dev.brunopatrick.compass.exercise1.Program1``.
+
+Para executar os demais exercícios, basta alterar a numeração do exercício no final do comando, sendo necessário alterar tanto do pacote, quanto da classe que contem o método ``main``. Sendo os exercícios numerados de 1 a 6.
+
+Por exemplo, para executar o exercício 6, devemos executar o comando da seguinte forma: ``java -cp .\compass-1.0-SNAPSHOT.jar dev.brunopatrick.compass.exercise6.Program6``
