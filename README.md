@@ -206,7 +206,7 @@ O projeto foi desenvolvido utilizando a linguagem de programação Java, utiliza
 Portanto, para executar o projeto, é necessário ter o JDK 17 instalado na máquina, que pode ser baixado através do link: https://www.oracle.com/java/technologies/downloads/#java17
 
 ## Utilizando uma IDE (IntelliJ IDEA)
-Após instalar o JDK 17, basta abrir o projeto em uma IDE de sua preferência com suporte ao _mavem_, como por exemplo o IntelliJ IDEA, para que todas as dependências sejam baixadas.
+Após instalar o JDK 17, basta abrir o projeto em uma IDE de sua preferência com suporte ao _maven_, como por exemplo o IntelliJ IDEA, para que todas as dependências sejam baixadas.
 
 Com o projeto aberto na IDE, basta executar a classe que corresponde ao método ``main`` de cada exercício (nomeados como Program**X**, sendo **X** a numeração do exercício), que estão organizados por pacote para melhor organização.
 Sendo a localização dos exercícios no pacote raiz ``dev.brunopatrick.compass``.
@@ -214,7 +214,7 @@ Sendo a localização dos exercícios no pacote raiz ``dev.brunopatrick.compass`
 Por exemplo, para navegar até o exercício 1, devemos entrar no pacote ``dev.brunopatrick.compass.exercise1``, e executar a classe ``Program1``.
 
 ## Utilizando o terminal
-Para executar o projeto diretamente via terminal, além do JDK 17, é necessário ter o _mavem_ instalado na máquina, que pode ser baixado através do link: https://maven.apache.org/download.cgi
+Para executar o projeto diretamente via terminal, além do JDK 17, é necessário ter o _maven_ instalado na máquina, que pode ser baixado através do link: https://maven.apache.org/download.cgi
 
 Após tudo instalado, basta abrir o terminal na pasta raiz do projeto, e executar o comando ``mvn clean install`` para que todas as dependências sejam baixadas. Após isso execute o comando ``mvn clean package`` para compilar nosso projeto.
 
