@@ -200,7 +200,7 @@ Código: ef44b4c1-7445-4e4b-8a77-69f57ecf565d
 Preço: 1000,00
 Quantidade em Estoque: 45
 ```
-
+---
 # Como executar o projeto
 O projeto foi desenvolvido utilizando a linguagem de programação Java, utilizando o Java Development Kit (JDK) na versão 17.
 Portanto, para executar o projeto, é necessário ter o JDK 17 instalado na máquina, que pode ser baixado através do link: https://www.oracle.com/java/technologies/downloads/#java17
